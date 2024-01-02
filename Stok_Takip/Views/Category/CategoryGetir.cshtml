@@ -1,0 +1,17 @@
+﻿@model Stok_Takip.Models.Category
+@using (Html.BeginForm("CategoryGetir","Category",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c=>c.CategoryId)
+        @Html.TextBoxFor(c=>c.CategoryId,new{@class="form-control"})
+    </div>
+    <br />
+    @Html.LabelFor(c=>c.CategoryName)
+    @Html.TextBoxFor(c=>c.CategoryName,new{@class="form-control"})
+    
+
+    <div>
+        <button class=" btn btn-warning">Kategori Güncelle</button>
+    </div>
+
+}

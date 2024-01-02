@@ -1,0 +1,20 @@
+﻿@model Stok_Takip.Models.Musteri
+
+@using (Html.BeginForm("MusteriGetir","Musteri",FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c=>c.MusteriId)
+        @Html.TextBoxFor(c=>c.MusteriId,new{@class="form-control"})
+    <br />
+    @Html.LabelFor(c=>c.MusteriName)
+    @Html.TextBoxFor(c=>c.MusteriName,new{@class="form-control"})
+    <br/>
+        @Html.LabelFor(c=>c.MusteriSurname)
+        @Html.TextBoxFor(c=>c.MusteriSurname,new{@class="form-control"})
+    </div>
+    <div>
+        <button class="btn btn-warning">Müşteri Güncelle</button>
+
+    </div>
+
+}

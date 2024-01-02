@@ -1,0 +1,27 @@
+﻿@model List<Category>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kategori adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td><a href="/Category/SIL/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Category/CategoryGetir/" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Category/YeniCategory/" class="btn btn-warning">Yeni Kategori Ekle</a>

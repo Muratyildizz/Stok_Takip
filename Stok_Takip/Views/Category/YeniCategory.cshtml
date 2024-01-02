@@ -1,0 +1,22 @@
+﻿
+@model Stok_Takip.Models.Category
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<form asp-action="YeniCategory" method="post">
+    <div  class="form-group">
+       <label>Kategori Adı</label>
+       @Html.TextBoxFor(c=>c.CategoryName,new {@class="form-control"})
+       @Html.ValidationMessageFor(c=>c.CategoryName,"",new {@style="color:red"})
+    </div>
+<div>
+        <button type="submit" class="btn btn-primary" id="btn2">Yeni kategori ekle</button>
+</div>
+    <script>
+    $('#btn2').click(function()
+    {
+    alert('Ekleme İşlemi Yapıldı')
+    });
+    </script>
+</form>

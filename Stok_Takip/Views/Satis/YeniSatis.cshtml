@@ -1,0 +1,34 @@
+﻿
+@model Stok_Takip.Models.Satis
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<form asp-action="YeniSatis" method="post">
+    <div class="form-group">
+        <label for="CategoryName">Urun</label>
+        <input type="text" class="form-control" id="Urun" name="Urun" required>
+    </div>
+    <div class="form-group">
+        <label for="CategoryName">Müşteri </label>
+        <input type="text" class="form-control" id="Musteri" name="Musteri" required>
+    </div>
+    <div class="form-group">
+        <label for="CategoryName">Adet </label>
+        <input type="text" class="form-control" id="Adet" name="Adet" required>
+    </div>
+    <div class="form-group">
+        <label for="CategoryName">Fiyat </label>
+        <input type="text" class="form-control" id="Fiyat" name="Fiyat" required>
+    </div>
+    <div>
+
+        <button type="submit" class="btn btn-primary" id="btn1">Yeni satış ekle</button>
+    </div>
+    <script>
+
+        $('#btn1').click(function () {
+            alert('Ekleme İşlemi Yapıldı')
+        });
+    </script>
+</form>

@@ -1,0 +1,28 @@
+﻿@model Stok_Takip.Models.Urun
+
+
+@using (Html.BeginForm("UrunGetir", "Urun", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c=>c.UrunId)
+        @Html.TextBoxFor(c=>c.UrunId,new{@class="form-control"})
+        <br />
+        @Html.LabelFor(c=>c.UrunName)
+        @Html.TextBoxFor(c=>c.UrunName,new{@class="form-control"})
+        <br />
+        @Html.LabelFor(c=>c.UrunCategory)
+        
+        @Html.TextBoxFor(c=>c.UrunCategory,new{@class="form-control"})
+        <br />
+        @Html.LabelFor(c=>c.UrunPrice)
+        @Html.TextBoxFor(c=>c.UrunPrice,new{@class="form-control"})
+        <br />
+        @Html.LabelFor(c=>c.Stok)
+        @Html.TextBoxFor(c=>c.Stok,new{@class="form-control"})
+    </div>
+    <div>
+        <button class="btn btn-warning">Ürün Güncelle</button>
+
+    </div>
+
+}
